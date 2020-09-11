@@ -34,9 +34,9 @@ Mysql
 
 O projeto foi desenvolvido utilizando as seguintes tecnologias
 
-- PHP
-- Bootstrap
-- Html
-- CSS
-- Less
+- <b>PHP</b> para conexão com o banco de dados e tratamento das requisições
+- <b>Bootstrap</b> para criação formatação e responsividade
+- <b>Html</b>  para organização do conteudo
+- <b>CSS</b> para formatação das páginas
+- <b>Less</b> na contrução do slider de produtos
 
