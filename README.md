@@ -7,7 +7,7 @@ ___
 
 Cópia do frontend da DAKO e backend com php para cadastro, listagem, edição e exclusão de usuários.
 
-## :information_how: Como usar
+## :information_source: Como usar
 
 <h4>FRONTEND:</h4>
     <ul>
