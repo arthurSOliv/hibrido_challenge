@@ -19,7 +19,7 @@ ___
 
 Cópia do frontend da DAKO e backend com php para cadastro, listagem, edição e exclusão de usuários.
 
-## :how-to: Como usar
+## :how: Como usar
 
 FRONTEND:
     - Abrir a pasta frontend no visual studio code e utilizar a ferramente live server
