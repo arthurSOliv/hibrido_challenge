@@ -1,0 +1,274 @@
+@ci: carousel-item;
+@media (min-width: 768px) {
+  .multi-item-carousel {
+    .carousel-inner-prod {
+      .@{ci} {
+        margin-right: inherit;
+
+        &.active {
+          + .@{ci},
+          + .@{ci} + .@{ci} {
+            display: block; // three visible items
+          }
+
+          // prevents opposite direction "animation"
+          &:not(.@{ci}-right):not(.@{ci}-left),
+          &:not(.@{ci}-right):not(.@{ci}-left) + .@{ci},
+          &:not(.@{ci}-right):not(.@{ci}-left) + .@{ci} + .@{ci} {
+            transition: none;
+          }
+    
+          // allows new item to be visible in order to "slide in" into place
+          + .@{ci} + .@{ci} + .@{ci} {
+            position: absolute;
+            top: 0;
+            z-index: -1;
+            display: block;
+            visibility: visible;
+          }
+        } // .active
+        &-next,
+        &-prev {
+          position: relative;
+          transform: translate3d(0, 0, 0);
+        }
+      } // .carousel-item
+    
+      // farthest right hidden item must be also positioned for animations 
+      .@{ci}-prev.@{ci}-right {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        display: block;
+        visibility: visible;
+      }
+    } // .carousel-inner
+    
+    // left or forward direction 
+    .active.@{ci}-left + .@{ci}-next.@{ci}-left,
+    .@{ci}-next.@{ci}-left + .@{ci},
+    .@{ci}-next.@{ci}-left + .@{ci} + .@{ci},
+    .@{ci}-next.@{ci}-left + .@{ci} + .@{ci} + .@{ci} {
+      position: relative;
+      transform: translate3d(-100%, 0, 0);
+      visibility: visible;
+    }
+
+    // right or previous direction 
+    .active.@{ci}-right + .@{ci}-prev.@{ci}-right,
+    .@{ci}-prev.@{ci}-right + .@{ci},
+    .@{ci}-prev.@{ci}-right + .@{ci} + .@{ci},
+    .@{ci}-prev.@{ci}-right + .@{ci} + .@{ci} + .@{ci} {
+      position: relative;
+      transform: translate3d(100%, 0, 0);
+      display: block;
+      visibility: visible;
+    }
+  } // multi-item-carousel
+}
+
+.product-item-link{
+	color: #575857;
+	font-weight: bold;
+}
+
+.price {
+	color: red;
+	font-weight: bold;
+}
+
+.boleto-price {
+  font-size: 17px;
+  font-weight: bold;
+  color: #575eaa;
+}
+
+.boleto-label {
+  font-size: 17px;
+  font-weight: normal;
+  color: #575eaa;
+}
+
+.boleto-discount {
+  color: #27c333;
+}
+
+.price_prod {
+  color: #ed3d60;
+  font-size: 24px;
+	font-weight: bold;
+}
+
+.boleto-price_prod {
+  font-size: 17px;
+  font-weight: bold;
+  color: #575eaa;
+}
+
+#moresales {
+  position: relative;
+}
+
+#moresales h2 {
+  font-weight: bold;
+}
+
+.link-discription{
+  text-decoration: none;
+  color: #575857;
+  font-size: 17px;
+  font-weight: 700;
+  cursor: pointer;
+
+  position: absolute;
+  right: 0;
+  top: 45px;
+}
+
+.link-prod {
+  color: #575857 !important;
+  font-weight: 700;
+}
+
+.bt-details {
+  background-image: none;
+    background: linear-gradient(264deg,#ed3d60 0%,#575eaa 100%);
+    border: unset;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-weight: 700;
+    padding: 13px 35px;
+    font-size: 1.5rem;
+    box-sizing: border-box;
+    vertical-align: middle;
+    border-radius: 200px;
+    display: none;
+}
+
+.prod:hover .bt-details{
+  display: block;
+}
+
+.title-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.title {
+  color: #575857;
+  font-weight: 700;
+  line-height: 1.1;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.img-center {
+  margin: 0;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.title-box p {
+  color: #575857;
+  font-size: 17px;
+  max-width: 268px;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 26px;
+}
+
+.title-box button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 245px;
+  width: 100%;
+  height: 46px;
+  color: #575eaa;
+  border: 2px solid #575eaa;
+  border-radius: 200px;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: .75px;
+  text-transform: uppercase;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.parallax-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  min-height: 600px;
+  background: url('https://www.dako.com.br/media/wysiwyg/background-blog_1.png');
+  margin-bottom: 100px;
+  padding: 50px 0;
+}
+
+.parallax-box h2 {
+  color: #ed3d60;
+  font-family: 'Vanillate';
+  font-size: 74px;
+  font-weight: 400;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.box1, .box2, .box3 {
+  margin-top: 100px;
+}
+
+.card {
+  margin-top: 100px;
+  box-shadow: 0 3px 15px rgba(0,0,0,.16);
+  border-radius: 0 0 10px 10px;
+}
+
+.box1 {
+  transform: translateY(50px)
+}
+
+.box3 {
+  transform: translateY(-50px)
+}
+
+.card-body a {
+  color: #ed3d60;
+  font-size: 17px;
+  font-weight: bold;
+}
+
+footer {
+  width: 100%;
+  min-height: 500px;
+  background: #575eaa;
+  padding: 59px 3% 23px;
+}
+
+footer h2 {
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+footer li {
+  list-style: none;
+  text-align: left;
+  margin: 10px;
+}
+
+footer a {
+  color: #fff;
+}
+
+footer a:hover {
+  color: #ed3d60;
+  text-decoration: none;
+}

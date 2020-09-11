@@ -1,0 +1,101 @@
+body {
+    font-family: 'Roboto', sans-serif !important;
+}
+
+.navbar {
+    padding: 20px 0;
+    background: #ed3d60 !important;
+}
+
+.form-inline input {
+    border-radius: 30px;
+    padding: 25px 10px;
+    width: 350px !important;
+}
+
+.form-inline input::placeholder {
+    color: #d5d5d5;
+    padding: 0 20px !important;
+}
+
+.search-btn {
+    position: relative;
+    right: 70px;
+    top: 3px;
+}
+
+.nav-link {
+    color: #fff !important;
+    font-weight: bold;
+}
+
+.material-icons {
+    font-size: 30px !important;
+}
+
+.cart {
+    background: #FFF;
+    color: #ed3d60 !important;
+    padding: 5px 10px;
+    border-radius: 50%;
+}
+
+.subnav {
+    padding: 10px;
+    height: auto;
+    background: #F0F0F0;
+}
+
+.subnav ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20%;
+}
+
+.subnav-li li {
+    list-style: none;
+    margin-top: 10px;
+}
+
+.subnav-li li:hover {
+    color: red;
+    background: #fff;
+}
+
+.subnav-li li a {
+    text-decoration: none;
+    font-size: 15px;
+    color: #575857;
+    font-weight: bold;
+}
+
+#carouselExampleIndicators1 .carousel-inner {
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 3px 0 rgba(0,0,0,.16);
+}
+
+@media (max-width: 800px) {
+    .navbar-brand img {
+        position: relative;
+        left: 50%;
+        transform: translate(50%,0);
+    }
+
+    .form-inline {
+        display: none;
+    }
+
+    .subnav ul {
+      display: block;
+    }
+}
+
+#moresales h2 {
+    color: #575eaa;
+}
+
+.block-discription {
+    color: #828485;
+}
