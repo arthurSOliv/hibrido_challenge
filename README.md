@@ -7,7 +7,7 @@ ___
 
 <h3 align="center">
   <a href="#information_source-sobre">Sobre</a>&nbsp;|&nbsp;
-  <a href="#how-to">Como usar</a>&nbsp;|&nbsp;
+  <a href="#how_to-como-usar">Como usar</a>&nbsp;|&nbsp;
   <a href="#seedling-requisitos-mínimos">Requisitos</a>&nbsp;|&nbsp;
   <a href="#rocket-tecnologias-utilizadas">Tecnologias</a>&nbsp;|&nbsp;
 </h3>
@@ -19,7 +19,7 @@ ___
 
 Cópia do frontend da DAKO e backend com php para cadastro, listagem, edição e exclusão de usuários.
 
-## :how: Como usar
+## :how_to: Como usar
 
 <h4>FRONTEND:</h4>
     <ul>
